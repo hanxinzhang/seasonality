@@ -34,7 +34,8 @@ The hierarchical structure of <tt>cond</tt> is
 print(cond['Condition'])
 
 # cond_data is a python defaultdict, length = 600
-# It contains the data of 600 population strata (patients who joined and left the register together) 
+# It contains the data of 600 population strata (patients who joined and left 
+# the register together) 
 cond_data = cond['Data']
 
 # Out: 600
