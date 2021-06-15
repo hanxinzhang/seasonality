@@ -22,7 +22,7 @@ The hierarchical structure of <tt>cond</tt> is
 - cond
     - Condition
     - Data
-        - (In-time, Out-time, Sex, Age-range)
+        - (In-time, Out-time, Sex, Age-range) # 600 population strata enrolled in different periods
             - HolidaySmoothObservation
             - RealObservation
             - PopSize
