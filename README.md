@@ -21,9 +21,7 @@ The hierarchical structure of <tt>cond</tt> is
 * cond
     * Condition (condition name)
     * Data (condition data)
-        * (1, 46, 'F', '51-65')
-        * ...
-        * (520, 570, 'F', '0-10')
+        * (In-time, Out-time, Sex, Age-range)
             * HolidaySmoothObservation
             * RealObservation
             * PopSize
