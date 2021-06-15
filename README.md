@@ -14,8 +14,21 @@ import pickle
 
 with open('cond_1.bpkl3', 'rb') as f:
     cond = pickle.load(f)
-    
 ```
+
+The hierarchical structure of <tt>cond</tt> is
+
+* cond
+    * Condition (condition name)
+    * Data (condition data)
+        * (1, 46, 'F', '51-65')
+        * ...
+        * (520, 570, 'F', '0-10')
+            * HolidaySmoothObservation
+            * RealObservation
+            * PopSize
+        
+ 
 
 ```python
 # Females' Abnormal spine curvature, a disease of the musculoskeletal system
