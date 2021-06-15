@@ -14,7 +14,10 @@ import pickle
 
 with open('cond_1.bpkl3', 'rb') as f:
     cond = pickle.load(f)
+    
+```
 
+```python
 # Females' Abnormal spine curvature, a disease of the musculoskeletal system
 # Out: Abnormal_spine_curvature|musculoskeletal$female.bpkl3
 print(cond['Condition'])
@@ -30,6 +33,30 @@ print(len(cond_data))
 # Out: (1, 46, 'F', '51-65')
 # meaning a female population stratum aged 51-65 enrolled in our data from week 1 to week 46
 print(sorted(cond_data.keys())[0])
+
+# For each population stratum, we record the observations and the population size
+# Out: ['HolidaySmoothObservation', 'RealObservation', 'PopSize']
+sample_stratum = cond_data[(1, 46, 'F', '51-65')]
+print(list(sample_stratum.keys()))
+
+# The holiday-smoothed observation includes diagnoses smoothed by averaging the 
+# raw observations around US federal holidays and Easters/Good Fridays
+# The data is stored in a python Counter (Key is time, Value is the counts of diagnosis)
+# Out: <class 'collections.Counter'>
+print(type(sample_stratum['HolidaySmoothObservation']))
+
+# We have the similar structure of the raw, unsmoothed observations
+# The data is stored in a python Counter (Key is time, Value is the counts of diagnosis)
+# Out: <class 'collections.Counter'>
+print(type(sample_stratum['RealObservation']))
+
+# Finally, we record the size of this population stratum at different time points
+# from week 1 to week 46
+# Out:
+# The number of enrollees in week 1:  175037
+# ...
+for t in range(1, 47):
+    print(f'The number of enrollees in week {t}: ', sample_stratum['PopSize'][t])
 ```
 
 
