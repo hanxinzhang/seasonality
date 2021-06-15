@@ -20,12 +20,12 @@ The hierarchical structure of <tt>cond</tt> is
 
 ```
 - cond
-    - Condition
+    - Condition # condition name
     - Data
         - (In-time, Out-time, Sex, Age-range) # 600 population strata enrolled in different periods
-            - HolidaySmoothObservation
-            - RealObservation
-            - PopSize
+            - HolidaySmoothObservation # Smoothed diagnosis counts at different times
+            - RealObservation # Diagnosis counts at different times
+            - PopSize # Population size at different times
 ```
         
 ```python
