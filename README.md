@@ -18,16 +18,14 @@ with open('cond_1.bpkl3', 'rb') as f:
 
 The hierarchical structure of <tt>cond</tt> is
 
-* cond
-    * Condition
-    * Data
-        * (In-time, Out-time, Sex, Age-range)
-            * HolidaySmoothObservation
-            * RealObservation
-            * PopSize
+> cond
+>> Condition
+>> Data
+>>> (In-time, Out-time, Sex, Age-range)
+>>>> HolidaySmoothObservation
+>>>> RealObservation
+>>>> PopSize
         
- 
-
 ```python
 # Females' Abnormal spine curvature, a disease of the musculoskeletal system
 # Out: Abnormal_spine_curvature|musculoskeletal$female.bpkl3
