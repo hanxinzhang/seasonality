@@ -77,8 +77,3 @@ for t in range(1, 47):
   <img src="./us_seasonality_psy.png" width="800">
 </p>
 
-<p align="center">
-  <img src="./migraine_us_female.png" width="600">
-</p>
-
-
